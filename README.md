@@ -112,5 +112,5 @@ Then we include a .css file. We can include every file's content.
       style={background: 'teal', padding: '80px'}
     )
       include text/sometext.txt
-    ```
+  ```
  Here we add a paragraph with some attributes and include a .txt file.
