@@ -1,0 +1,106 @@
+mixin menuItem(url, name)
+  li
+    //- NO JS ACTIVE MENU ITEM
+    //- li(class={'tq-selected': name === pageTitle})
+    a.tq-item(href= url + '.html')
+      span.tq-text-node #{name}
+
+.tq-sidebars-wrapper
+  .tq-tabs-container
+    .tq-tabs.tq-sidebar-switch
+      ul
+        li(data-sidebar='left')
+          .tq-item
+            span.text-node Left Sidebar
+        li(data-sidebar='right')
+          .tq-item
+            span.text-node Right Sidebar
+    .tq-tab-content.tq-responsive-tab-content
+      aside.tq-sidebar.tq-left-sidebar.tq-multi-menu.tq-light
+        .tq-sb-expander
+          .tq-top-menu
+            ul.tq-list-new
+              li
+                span.tq-btn.tq-icon.tq-no-background
+                  i.tq-icon-gear
+              li
+                span.tq-btn.tq-icon.tq-no-background
+                  i.tq-icon-cloud
+              li
+                span.tq-btn.tq-icon.tq-no-background
+                  i.tq-icon-pdf
+              li
+                span.tq-btn.tq-icon.tq-no-background
+                  i.tq-icon-clock-left-arrow
+              li
+                span.tq-btn.tq-icon.tq-no-background
+                  i.tq-icon-alert
+              li
+                span.tq-btn.tq-icon.tq-no-background
+                  i.tq-icon-check
+              li
+                span.tq-btn.tq-icon.tq-no-background
+                  i.tq-icon-rocket
+          .tq-bottom-menu
+            ul.tq-list-new
+                li
+                  span.tq-btn.tq-icon.tq-no-background
+                    i.tq-icon-sign-out-right
+                li
+                  span.tq-btn.tq-icon.tq-no-background
+                    i.tq-icon-question-mark
+        .tq-sb-controls
+          h3.tq-panel-title
+            span.tq-text-node Designed UI Components
+        .tq-sb-expose
+          ul.tq-list-new.tq-borders.tq-selectable
+            +menuItem('index', 'Index')
+            +menuItem('accordion', 'Accordion')
+            +menuItem('action-menu', 'Action Menu')
+            +menuItem('badge', 'Badge')
+            +menuItem('breadcrumb', 'Breadcrumb')
+            +menuItem('button', 'Button')
+            +menuItem('card-panel', 'Card panel')
+            +menuItem('carousel', 'Carousel')
+            +menuItem('chart', 'Chart')
+            +menuItem('checkbox-group', 'Checkbox Group')
+            +menuItem('datepicker', 'Datepicker')
+            +menuItem('demo-responsive', 'Demo Responsive')
+            +menuItem('drop-down', 'Drop-down')
+            +menuItem('file-upload', 'File upload')
+            +menuItem('flow-component', 'Flow component')
+            +menuItem('footer', 'Footer')
+            +menuItem('grid-layout', 'Grid Layout')
+            +menuItem('header', 'Header')
+            +menuItem('heading', 'Heading')
+            +menuItem('hyperlink', 'Hyperlink')
+            +menuItem('icon', 'Icon')
+            +menuItem('image-gallery', 'Image gallery')
+            +menuItem('inline-container', 'Inline container')
+            +menuItem('input-number', 'Input number')
+            +menuItem('input-text', 'Input text')
+            +menuItem('list', 'List')
+            +menuItem('logo', 'Logo')
+            +menuItem('modal', 'Modal')
+            +menuItem('multiselect', 'Multiselect')
+            +menuItem('notifications', 'Notifications')
+            +menuItem('output-text', 'Output text')
+            +menuItem('pagination', 'Pagination')
+            +menuItem('pdf-viewer', 'PDF viewer')
+            +menuItem('popover', 'Popover')
+            +menuItem('preloader', 'Preloader')
+            +menuItem('radio-group', 'Radio Group')
+            +menuItem('range-slider', 'Range Slider')
+            +menuItem('search', 'Search')
+            +menuItem('separator', 'Separator')
+            +menuItem('sidebar', 'Sidebar')
+            +menuItem('step-progress', 'Step progress')
+            +menuItem('sub-header', 'Sub-header')
+            +menuItem('switcher', 'Switcher')
+            +menuItem('table', 'Table')
+            +menuItem('table-new', 'Table-new')
+            +menuItem('tabs', 'Tabs')
+            +menuItem('textarea', 'Textarea')
+            +menuItem('thumbnail', 'Thumbnail')
+            +menuItem('tooltip', 'Tooltip')
+            +menuItem('tree', 'Tree')

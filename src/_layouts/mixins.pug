@@ -1,0 +1,241 @@
+mixin panel()
+  .tq-panel
+    .tq-grid.tq-gutter-all
+      block
+        
+mixin defaultAccordion()
+  ul.tq-no-bullets
+    li
+      .tq-section-container
+        div
+          .tq-sub-title.tq-heavy-splitter.tq-sub-title-background.tq-expandable-title.tq-with-right-menu
+            span.tq-text-node First accordion title
+            ul.tq-menu.tq-borders.tq-selectable
+              li
+                span.tq-item
+                  i.tq-icon-arrows-expand
+              li
+                span.tq-item
+                  i.tq-icon-close
+        .tq-section-content
+          .tq-grid
+            .tq-row
+              .tq-l-col-24-24.tq-gutter
+                h1.tq-panel-title Some Text Container
+                p
+                  | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget rutrum nibh.
+                  br
+                  | Nullam dignissim non arcu non mattis. Nulla lacinia velit a sollicitudin tincidunt vestibulum vitae tincidunt semunc in pretium sem, eget iaculis risus maecenas id lectus eget orci vehicula tincidunt donec iaculis lectus quis faucibus gravida.
+                .tq-checkbox-group-container.tq-vertical.tq-offset-bottom
+                  .tq-checkbox-group.tq-icon-inputs
+                    .tq-label-input-container.tq-checked
+                      label(for='iconInput1')
+                        i.tq-icon-credit-card-2
+                      |  
+                      input#iconInput1(type='checkbox')
+                    .tq-label-input-container.tq-indeterminate
+                      label(for='iconInput2')
+                        i.tq-icon-table
+                      |  
+                      input#iconInput2(type='checkbox')
+                    .tq-label-input-container.tq-indeterminate
+                      label(for='iconInput3')
+                        i.tq-icon-connection-square
+                      |  
+                      input#iconInput3(type='checkbox')
+                    .tq-label-input-container.tq-disabled
+                      label(for='iconInput4')
+                        i.tq-icon-monitor
+                      |  
+                      input#iconInput4(type='checkbox')
+                    .tq-label-input-container
+                      label(for='iconInput5')
+                        i.tq-icon-tag
+                      |  
+                      input#iconInput5(type='checkbox')
+                    .tq-label-input-container.tq-checked
+                      label(for='iconInput6')
+                        i.tq-icon-map
+                      |  
+                      input#iconInput6(type='checkbox')
+                    .tq-label-input-container.tq-indeterminate
+                      label(for='iconInput7')
+                        i.tq-icon-list
+                      |  
+                      input#iconInput7(type='checkbox')
+                ul.tq-no-bullets
+                  li
+                    .tq-section-container
+                      div
+                        .tq-sub-title.tq-heavy-splitter.tq-sub-title-background.tq-expandable-title.tq-with-right-menu
+                          span.tq-text-node Accordion title
+                          ul.tq-menu.tq-borders.tq-selectable
+                            li
+                              span.tq-item
+                                i.tq-icon-arrows-expand
+                            li
+                              span.tq-item
+                                i.tq-icon-close
+                      .tq-section-content
+                        .tq-grid
+                          .tq-row
+                            .tq-l-col-24-24.tq-gutter
+                              ul
+                                li
+                                  span.tq-item
+                                    span.tq-text-node Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget rutrum nibh
+                                li
+                                  span.tq-item
+                                    span.tq-text-node Rincidunt donec iaculis lectus quis faucibus gravida
+                                li
+                                  span.tq-item
+                                    span.tq-text-node Lectus quis faucibus gravida
+                                li
+                                  span.tq-item
+                                    span.tq-text-node Sed eget rutrum nibh.
+                                li
+                                  span.tq-item
+                                    span.tq-text-node Nulla lacinia velit a sollicitudin tincidunt
+    li
+      .tq-section-container
+        div
+          .tq-sub-title.tq-heavy-splitter.tq-sub-title-background.tq-expandable-title.tq-with-right-menu
+            span.tq-text-node Second accordion title
+            ul.tq-menu.tq-borders.tq-selectable
+              li
+                span.tq-item
+                  i.tq-icon-arrows-expand
+              li
+                span.tq-item
+                  i.tq-icon-close
+        .tq-section-content
+          .tq-grid
+            h1.tq-panel-title Some Container
+            .tq-row
+              .tq-l-col-24-24.tq-gutter
+                .tq-label-input-container.tq-vertical
+                  .tq-label-container
+                    label.tq-label
+                      | This is fairly long label
+                      span.tq-tooltip-container
+                        i.tq-icon-circle-info
+                        .tq-tooltip Hi I am tooltip
+                  .tq-input-container
+                    input.tq-input(value='', placeholder='')
+                    .tq-form-feedback Case sensitive input
+    li
+      .tq-section-container
+        div
+          .tq-sub-title.tq-heavy-splitter.tq-sub-title-background.tq-expandable-title.tq-with-right-menu
+            span.tq-text-node
+              | Long accordion title Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Long accordion title Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet
+            ul.tq-menu.tq-borders.tq-selectable
+              li
+                span.tq-item
+                  i.tq-icon-arrows-expand
+              li
+                span.tq-item
+                  i.tq-icon-close
+        .tq-section-content
+          .tq-grid
+            h1.tq-panel-title Some Container
+            .tq-row
+              .tq-l-col-24-24.tq-gutter
+                .tq-label-input-container.tq-vertical
+                  .tq-label-container
+                    label.tq-label
+                      | This is fairly long label
+                      span.tq-tooltip-container
+                        i.tq-icon-circle-info
+                        .tq-tooltip Hi I am tooltip
+                  .tq-input-container
+                    input.tq-input(value='', placeholder='')
+                    .tq-form-feedback Case sensitive input
+    li
+      .tq-section-container
+        div
+          .tq-sub-title.tq-heavy-splitter.tq-sub-title-background.tq-expandable-title.tq-with-right-menu
+            span.tq-text-node Fourth accordion title
+            ul.tq-menu.tq-borders.tq-selectable
+              li
+                span.tq-item
+                  i.tq-icon-arrows-expand
+              li
+                span.tq-item
+                  i.tq-icon-close
+        .tq-section-content
+          .tq-grid
+            h1.tq-panel-title Some Container
+            .tq-row
+              .tq-l-col-24-24.tq-gutter
+                .tq-label-input-container.tq-vertical
+                  .tq-label-container
+                    label.tq-label
+                      | This is fairly long label
+                      span.tq-tooltip-container
+                        i.tq-icon-circle-info
+                        .tq-tooltip Hi I am tooltip
+                  .tq-input-container
+                    input.tq-input(value='', placeholder='')
+                  .tq-form-feedback Case sensitive input
+                  
+mixin accentedCardPanel()
+  .tq-flex-card
+    .tq-panel.tq-card.tq-accent.tq-clickable-card
+      header
+        i.tq-icon-gears-two.tq-card-icon
+      .tq-card-content
+        h1.tq-panel-title
+          span.tq-text-node Accented card panel
+        .tq-text-content
+          p
+            | Led efficitur ac metus in molestie. Nunc ut nisi in metus ornare ullamcorper. Maecenas accumsan mauris sit amet bibendum scelerisque.
+        |  
+        button.tq-btn
+          span.tq-text-node View more
+          
+mixin stepProgress()
+  .tq-row
+    .tq-l-col-24-24.tq-gutter-all
+      ul.tq-step-progress-container
+        li.tq-step.tq-done-step
+          i.tq-step-icon.tq-icon-download
+          |  
+          span.tq-text-node Download app
+        li.tq-step.tq-done-step
+          i.tq-step-icon.tq-icon-pencil
+          |  
+          span.tq-text-node.tq-cropped-item Personal details
+        li.tq-step.tq-current-step
+          i.tq-step-icon.tq-icon-check
+          |  
+          span.tq-text-node Check
+        li.tq-step
+          i.tq-step-icon.tq-icon-rotate
+          |  
+          span.tq-text-node Send feedback
+          
+mixin defaultBanner()
+  .tq-row
+    .tq-l-col-18-24.tq-m-col-7-12.tq-s-col-6-6.tq-gutter
+      .tq-panel.tq-banner.tq-clickable.tq-text-right.tq-dark-text.tq-banner-h-250.tq-text-background(style='background-image: url(img/img-thumb4.jpg)')
+        .tq-banner-content
+          h2.tq-panel-title.tq-title-xl.tq-bold
+            span.tq-text-node Banner title-XL
+          h2.tq-panel-title.tq-title-l
+            span.tq-text-node Banner title-L
+          h2.tq-panel-title
+            span.tq-text-node Banner title
+          .tq-banner-description
+            span.tq-text-node
+              | This banner is clickable and it has dark text, predefined height and text background
+    .tq-l-col-6-24.tq-m-col-5-12.tq-s-col-6-6.tq-gutter
+      .tq-panel.tq-banner.tq-text-bottom.tq-banner-h-400.tq-banner-overlay(style='background-image: url(img/img-thumb1.jpg)')
+        .tq-banner-content
+          h2.tq-panel-title.tq-title-l
+            span.tq-text-node Vertical Banner
+          h2.tq-panel-title
+            span.tq-text-node Fixed height
+          .tq-banner-description
+            span.tq-text-node
+              | This banner has predefined height and background overlay. Its width depends on the grid.         

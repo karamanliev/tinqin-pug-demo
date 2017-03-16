@@ -1,0 +1,29 @@
+extends _layouts/main-layout.pug
+
+block append config
+  - var pageTitle = 'Include Demo'
+  - var pageTopText = 'Include Demooooooo'
+  - var isThereHeader = true
+
+block styles
+  style
+    include styles/style.css
+  
+block main
+  +panel
+    p(
+      id='idOfText'
+      class='someDemoText'
+      name='textName'
+      style={background: 'teal', padding: '80px'}
+    )
+      include text/sometext.txt
+              
+block append scripts
+  //- action menu script
+  script(type='text/javascript').
+    $('.tq-selectable li > .tq-item').click(function() {
+      var $this = $(this),
+      li = $this.parent();
+      li.toggleClass("tq-current");
+      });

@@ -1,0 +1,59 @@
+header.tq-app-header.tq-dark
+  .tq-header-child
+    span.tq-logo
+  .tq-header-child.tq-hide-in-480
+    h1.tq-panel-title Welcome to the UI Components Design Project
+  .tq-header-child.tq-hide-in-1024
+    ul.tq-menu.tq-borders.tq-right
+      li
+        span.tq-item
+          span.tq-btn.tq-icon.tq-no-background.tq-no-padding
+            i.tq-icon-envelope
+      li
+        span.tq-item
+          span.tq-btn.tq-icon.tq-no-background.tq-no-padding
+            i.tq-icon-calendar
+      li
+        span.tq-item.tq-tooltip-container
+          span.tq-btn.tq-icon.tq-no-background.tq-no-padding
+            i.tq-icon-sign-out-right
+            .tq-tooltip Exit
+  .tq-header-child.tq-right.tq-show-in-768
+    ul.tq-menu.tq-borders
+      li.tq-responsive-sidebars
+        .tq-item
+          span.tq-btn.tq-icon.tq-no-background.tq-no-padding
+            i.tq-icon-menu-bar
+  .tq-header-child.tq-right.tq-hide-in-480
+    ul.tq-menu.tq-borders
+      li
+        .tq-item
+          .tq-search-container.tq-collapsed.tq-with-submit-btn.tq-with-check-filters
+            .tq-checkbox-group-container.tq-no-label
+              .tq-checkbox-group-switch
+                .tq-label-input-container
+                  label(for='item1ID')
+                    i.tq-icon-folder-open.tq-inline.tq-padding
+                  |  
+                  input#item1ID(type='checkbox')
+                .tq-label-input-container
+                  label(for='item2ID')
+                    i.tq-icon-document-blank.tq-inline.tq-padding
+                  |  
+                  input#item2ID(type='checkbox')
+            |  
+            input.tq-input(type='text', value='', placeholder='Search...')
+            span.tq-search-expand
+            |  
+            button.tq-search-collapse.tq-btn.tq-no-background
+              i.tq-icon-close
+  .tq-header-child.tq-right
+    ul.tq-menu.tq-borders
+      li.tq-hide-in-480
+        span.tq-item
+          span.tq-text-node Friday, 29.01.2016
+      li
+        span.tq-item
+          i.tq-icon-user
+          |  
+          span.tq-text-node.tq-hide-in-768 Pierre Gold

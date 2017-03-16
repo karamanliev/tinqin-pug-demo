@@ -1,0 +1,12 @@
+script(src='https://code.jquery.com/jquery-2.1.4.min.js')
+
+//- sidebar active item script
+script(type='text/javascript').
+  if(window.location.pathname === "/") {
+    $('.tq-list-new li:first-child').addClass('tq-selected');
+  } 
+  else {
+    $(".tq-list-new li a").filter(function(){
+      return this.href == location.href.replace(/#.*/, "");
+    }).parent('li').addClass("tq-selected");
+  }

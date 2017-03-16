@@ -1,0 +1,171 @@
+extends _layouts/main-layout.pug
+
+block append config
+  - var pageTitle = 'Action Menu'
+  - var pageTopText = 'Action Menu Component'
+  - var isThereHeader = false
+
+block main
+  +panel
+    .tq-row
+      .tq-l-col-12-24.tq-m-col-12-12.tq-gutter
+        h2.tq-panel-title.tq-gutter-bottom Unordered list with class .tq-menu
+        ul.tq-menu
+          li
+            .tq-item
+              span.tq-text-node Home
+          li
+            .tq-item
+              span.tq-text-node About
+          li
+            .tq-item
+              span.tq-text-node Case Study
+          li
+            .tq-item
+              span.tq-text-node Demos
+          li
+            .tq-item
+              span.tq-text-node Testimonials
+          li
+            .tq-item
+              span.tq-text-node Products
+          li
+            .tq-item
+              span.tq-text-node Contact
+    .tq-row
+      .tq-l-col-12-24.tq-m-col-12-12.tq-gutter-all
+        h2.tq-panel-title.tq-gutter-bottom Unordered list with classes .tq-menu.borders.selectable
+        ul.tq-menu.tq-borders.tq-selectable
+          li
+            .tq-item
+              span.tq-text-node Home
+          li
+            .tq-item
+              span.tq-text-node About
+          li
+            .tq-item
+              span.tq-text-node Case Study
+          li
+            .tq-item
+              span.tq-text-node Demos
+          li.tq-current
+            .tq-item
+              span.tq-text-node Testimonials
+          li
+            .tq-item
+              span.tq-text-node Products
+          li
+            .tq-item
+              span.tq-text-node Contact
+    .tq-row
+      .tq-l-col-12-24.tq-m-col-12-12.tq-gutter-all
+        h2.tq-panel-title.tq-gutter-bottom Unordered list with icons before text
+        ul.tq-menu.tq-borders
+          li
+            .tq-item
+              i.tq-icon-credit-card-2
+              span.tq-text-node Home
+          li
+            .tq-item
+              i.tq-icon-map-marker
+              span.tq-text-node About
+          li
+            .tq-item
+              i.tq-icon-table
+              span.tq-text-node Case Study
+          li
+            .tq-item
+              i.tq-icon-tag
+              span.tq-text-node Demos
+          li
+            .tq-item
+              i.tq-icon-map
+              span.tq-text-node Testimonials
+    .tq-row
+      .tq-l-col-12-24.tq-m-col-12-12.tq-gutter-all
+        h2.tq-panel-title.tq-gutter-bottom Unordered list with icons after text
+        ul.tq-menu.tq-borders
+          li
+            .tq-item
+              span.tq-text-node Home
+              i.tq-icon-credit-card-2
+          li
+            .tq-item
+              span.tq-text-node About
+              i.tq-icon-map-marker
+          li
+            .tq-item
+              span.tq-text-node Case Study
+              i.tq-icon-table
+          li
+            .tq-item
+              span.tq-text-node Demos
+              i.tq-icon-tag
+          li
+            .tq-item
+              span.tq-text-node Testimonials
+              i.tq-icon-map
+    .tq-row
+      .tq-l-col-12-24.tq-m-col-12-12.tq-gutter-all
+        h2.tq-panel-title.tq-gutter-bottom Unordered list of icons and class .tq-menu.selectable
+        ul.tq-menu.tq-selectable
+          li
+            .tq-item
+              i.tq-icon-credit-card-2
+          li
+            .tq-item
+              i.tq-icon-map-marker
+          li
+            .tq-item
+              i.tq-icon-table
+          li
+            .tq-item
+              i.tq-icon-tag
+          li
+            .tq-item
+              i.tq-icon-map
+          li
+            .tq-item
+              i.tq-icon-checklist-2
+          li
+            .tq-item
+              i.tq-icon-monitor
+    .tq-row
+      .tq-l-col-12-24.tq-m-col-12-12.tq-gutter-all
+        h2.tq-panel-title.tq-gutter-bottom Unordered list with icons and classes .tq-menu.borders.selectable
+        ul.tq-menu.tq-borders.tq-selectable
+          li
+            .tq-item
+              i.tq-icon-credit-card-2
+          li
+            .tq-item
+              i.tq-icon-map-marker
+          li
+            .tq-item
+              i.tq-icon-table
+          li
+            .tq-item
+              i.tq-icon-tag
+          li
+            .tq-item
+              i.tq-icon-map
+          li
+            .tq-item
+              i.tq-icon-checklist-2
+          li
+            .tq-item
+              i.tq-icon-monitor
+  
+  - var panels = ['panel 2', 'panel 3', 'panel 4', 'panel 5']
+  each panelText in panels
+    +panel
+      h1= panelText.toUpperCase()
+              
+block append scripts
+  //- action menu script
+  script(type='text/javascript').
+    $('.tq-selectable li > .tq-item').click(function() {
+      var $this = $(this),
+      li = $this.parent();
+      li.toggleClass("tq-current");
+      });
