@@ -10,6 +10,7 @@ var gulp = require('gulp'),
   newer = require('gulp-newer'),
   imagemin = require('gulp-imagemin'),
   browserSync = require('browser-sync');
+  var rename = require('gulp-rename');
 
 /*
  * Directories here
@@ -47,8 +48,8 @@ gulp.task('fonts', function () {
  * Compile .pug files and pass in data from json file
  * matching file name. index.pug - index.pug.json
  */
-gulp.task('pug', function () {
-  return gulp.src('./src/*.pug')
+gulp.task('pug', function (callback) {
+  gulp.src('./src/*.pug')
     // .pipe(data(function (file) {
     //   return require(paths.data + path.basename(file.path) + '.json');
     // }))
@@ -57,7 +58,17 @@ gulp.task('pug', function () {
       process.stderr.write(err.message + '\n');
       this.emit('end');
     })
+    .pipe(rename(function(path){
+      if (path.basename == 'index') {
+        return;
+      }
+      // path.dirname=path.basename.split('-').join('/');
+      path.dirname=path.basename;
+      path.basename = "index";
+    }))
     .pipe(gulp.dest(paths.public));
+
+    callback();
 });
 
 /**
