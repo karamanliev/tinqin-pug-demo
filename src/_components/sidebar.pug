@@ -2,8 +2,12 @@ mixin menuItem(url, name)
   li
     //- NO JS ACTIVE MENU ITEM
     //- li(class={'tq-selected': name === pageTitle})
-    a.tq-item(href= url + '/')
-      span.tq-text-node #{name}
+    if !url
+      a.tq-item(href="/")
+        span.tq-text-node Index
+    else
+      a.tq-item(href= "../" + url + '/')
+        span.tq-text-node #{name}
 
 .tq-sidebars-wrapper
   .tq-tabs-container
@@ -54,7 +58,7 @@ mixin menuItem(url, name)
             span.tq-text-node Designed UI Components
         .tq-sb-expose
           ul.tq-list-new.tq-borders.tq-selectable
-            +menuItem('index', 'Index')
+            +menuItem()
             +menuItem('accordion', 'Accordion')
             +menuItem('action-menu', 'Action Menu')
             +menuItem('badge', 'Badge')

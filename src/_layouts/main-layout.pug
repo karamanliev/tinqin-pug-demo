@@ -4,6 +4,7 @@ block config
   - var pageTitle = 'Web UI'
   - var pageTopText = 'UI elements'
   - var isThereHeader = true
+  - var isMainFile = false
   
 if isThereHeader === true
   - var header = 'tq-with-header tq-with-primary-subheader'
@@ -18,7 +19,11 @@ html(lang='en')
     meta(http-equiv='X-UA-Compatible', content='IE=edge')
     meta(name='viewport', content='width=device-width, initial-scale=1')
     title= pageTitle
-    link(href='css/main.css', rel='stylesheet', type='text/css')
+    case isMainFile
+      when false
+        link(href='../css/main.css', rel='stylesheet', type='text/css')
+      when true
+        link(href='css/main.css', rel='stylesheet', type='text/css')
     link(rel='stylesheet', href='http://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css')
     script(src='http://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js')
     //if lt IE 9
