@@ -110,7 +110,7 @@ gulp.task('watch', function () {
 });
 
 // Build task compile sass, pug and minify images.
-gulp.task('build', ['sass', 'pug', 'images']);
+gulp.task('build', ['sass', 'pug', 'images', 'fonts']);
 
 /**
  * Default task, running just `gulp` will compile the sass,
