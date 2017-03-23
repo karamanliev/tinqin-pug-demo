@@ -9,8 +9,8 @@ var gulp = require('gulp'),
   sass = require('gulp-sass'),
   newer = require('gulp-newer'),
   imagemin = require('gulp-imagemin'),
-  browserSync = require('browser-sync');
-  var rename = require('gulp-rename');
+  browserSync = require('browser-sync'),
+  rename = require('gulp-rename');
 
 /*
  * Directories here
